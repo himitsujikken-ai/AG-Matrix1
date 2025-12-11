@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Serif_JP, JetBrains_Mono } from "next/font/google";
 import { GridBackground } from "@/components/ui/grid-background";
+import { MatrixRain } from "@/components/ui/matrix-rain";
 import "./globals.css";
 
 const serif = Noto_Serif_JP({
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="ja" className={`${serif.variable} ${mono.variable}`}>
       <body className="font-serif antialiased overflow-x-hidden selection:bg-cyan-500/30 selection:text-cyan-100">
         <div className="scanlines" />
+        <MatrixRain />
         <GridBackground />
         {children}
       </body>
